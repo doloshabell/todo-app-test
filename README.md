@@ -2,6 +2,8 @@
 
 https://fe-test-habell-dolosha-purba.netlify.app/dashboard/data-tables
 
+*user need to activated the location, if don't then it'll refer to lat and long Jakarta (location only for weather status)
+
 ## Screenshots
 
 1. When the todo list is empty
