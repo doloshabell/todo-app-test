@@ -105,14 +105,14 @@ function TodoModal({ type, modalOpen, setModalOpen, todo }) {
             </motion.div>
 
             <form className="w-full" onSubmit={(e) => handleSubmit(e)}>
-              <h1 className="text-3xl font-bold mb-10">
+              <h1 className="text-3xl font-bold mb-5">
                 {type === "add" ? "Add" : "Update"} TODO
               </h1>
               <label htmlFor="title" className="text-2xl">
                 Title
                 <input
                   type="text"
-                  className="mt-2 mb-8 w-full p-4 border-none bg-white text-xl rounded-lg"
+                  className="mt-2 mb-5 w-full p-4 border-none bg-white text-xl rounded-lg"
                   id="title"
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
@@ -122,7 +122,7 @@ function TodoModal({ type, modalOpen, setModalOpen, todo }) {
                 Status
                 <select
                   id="type"
-                  className="mt-2 mb-8 w-full p-4 border-none bg-white text-xl rounded-lg"
+                  className="mt-1 mb-7 w-full p-4 border-none bg-white text-xl rounded-lg"
                   value={status}
                   onChange={(e) => setStatus(e.target.value)}
                 >
@@ -130,7 +130,7 @@ function TodoModal({ type, modalOpen, setModalOpen, todo }) {
                   <option value="complete">Completed</option>
                 </select>
               </label>
-              <div className="flex justify-start items-center mt-8 gap-4">
+              <div className="flex justify-start items-center gap-4">
                 <Button type="submit" variant="primary">
                   {type === "add" ? "Add Task" : "Update Task"}
                 </Button>

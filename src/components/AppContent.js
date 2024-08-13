@@ -51,20 +51,22 @@ function AppContent() {
       animate="visible"
     >
       <AnimatePresence>
-        <div className="mb-5">
-          <input
-            type="text"
-            className="mt-2 mb-8 w-full p-4 border-none bg-white text-xl rounded-lg"
-            id="title"
-            placeholder="search todo..."
-            value={searchTextTodo}
-            onChange={(e) => setSearchTextTodo(e.target.value)}
-          />
-        </div>
         {displayedTodoList && displayedTodoList.length > 0 ? (
-          displayedTodoList.map((todo) => (
-            <TodoItem key={todo.id} todo={todo} />
-          ))
+          <>
+            <div className="mb-5">
+              <input
+                type="text"
+                className="mt-2 mb-8 w-full p-4 border-none bg-white text-xl rounded-lg"
+                id="title"
+                placeholder="search todo..."
+                value={searchTextTodo}
+                onChange={(e) => setSearchTextTodo(e.target.value)}
+              />
+            </div>
+            {displayedTodoList.map((todo) => (
+              <TodoItem key={todo.id} todo={todo} />
+            ))}
+          </>
         ) : (
           <motion.p
             variants={child}

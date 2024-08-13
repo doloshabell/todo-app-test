@@ -53,23 +53,23 @@ function WeatherContent() {
   }, [location, dispatch]);
 
   return (
-    <>
+    <div className="flex font-bold text-2xl gap-1 items-center bg-purple-300 p-2 rounded-xl text-slate-600">
       {isLoading && <p>Loading...</p>}
       {isError && <p>Error: {errorMessage}</p>}
       {dataWeather && (
-        <div className="flex gap-1 items-center bg-gray-200 p-2 rounded-xl text-slate-600">
+        <>
           <img
             src={dataWeather.icon}
             alt="weather icon"
             className="w-16 h-16"
           />
-          <div className="font-bold text-2xl">
+          <div>
             <p>{dataWeather.temperature}°C</p>
             <h2>{dataWeather.location}</h2>
           </div>
-        </div>
+        </>
       )}
-    </>
+    </div>
   );
 }
 
